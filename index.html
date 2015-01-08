@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    {block:Description}
+    <meta name="description" content="{MetaDescription}" />
+    {/block:Description}
+    <title>{block:TagPage}{Tag} - {/block:TagPage} {block:SearchPage}{lang:Search results for SearchQuery} - {/block:SearchPage}{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="apple-touch-icon" href="{PortraitURL-128}">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:site_name" content="http://note-madlover.tumblr.com/">
+    <meta name="text:Google Analytics ID" content=''/>
+    <link rel="shortcut icon" type="mage/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon-152.png" type="image/png" />
+    <link href="http://static.tumblr.com/wgijwsy/YZomlhwl6/normalize.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//madlover.org/tumblr/css/style.css" rel="stylesheet" type="text/css" media="screen" charset="utf-8"/>
+    <style>{CustomCSS}</style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="wrap">
+        <div class="inner">
+          <div id="content">
+            <header id="header">
+              <h1 class="page-ttl">
+                <a href="/">{Title}</a>
+              </h1>
+              <nav class="nav-global">
+                <ul>
+                  {block:HasPages}
+                    {block:Pages}
+                    <li>
+                      <a href="{URL}">{Label}</a>
+                    </li>
+                    {/block:Pages}
+                  {/block:HasPages}
+                    <li>
+                      <a href="/archive">Archive</a>
+                    </li>
+                </ul>
+              </nav>
+            </header>
+            <div id="main">
+              {block:Posts}
+              {block:Text}
+              <div class="entry">
+                <article>
+                  <header class="entry-header">
+                  {block:Title}
+                    <h1 class="entry-title">
+                      <a href="{Permalink}">{Title}</a>
+                    </h1>
+                    {/block:Title}
+                  {block:Date}
+                    <p class="day">
+                      <a href="{Permalink}">{Year}.{MonthNumberWithZero}.{DayOfMonthWithZero}[{ShortDayOfWeek}]</a>
+                    </p>
+                  {/block:Date}
+                  </header>
+                  <p>{Body}</p>
+                  {block:More}
+                  <p class="entry-more">
+                    <a href="{Permalink}">…More</a>
+                  </p>
+                  {/block:More}
+                  {block:HasTags}
+                  <footer class="entry-footer">
+                    <ul class="tag">
+                      {block:Tags}
+                      <li>
+                        <a href="{TagURL}">#{Tag}</a>
+                      </li>
+                      {/block:Tags}
+                    </ul>
+                  </footer>
+                  {/block:HasTags}
+                </article>
+              </div>
+              {/block:Text}
+              {/block:Posts}
+            </div>
+
+            {block:Pagination}<!-- pagenate -->
+            <div class="pagenate">
+              <div class="prev">
+                {block:PreviousPage}<a href="{PreviousPage}">«</a>{/block:PreviousPage}
+              </div>
+              <div class="next">
+                {block:NextPage}<a href="{NextPage}">»</a>{/block:NextPage}
+              </div>
+            </div>
+            {/block:Pagination}
+
+            <footer id="footer">
+              <nav class="nav-footer">
+                <ul>
+                  {block:HasPages}
+                    {block:Pages}
+                    <li>
+                      <a href="/">{Label}</a>
+                    </li>
+                    {/block:Pages}
+                  {/block:HasPages}
+                    <li>
+                      <a href="/archive">Archive</a>
+                    </li>
+                </ul>
+              </nav>
+              <div class="copy">
+                <small>Copyright(C) 2014–2015 Note  /  Apollo theme designed by Chome</small>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+    {block:IfGoogleAnalyticsID} <script>
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '{text:Google Analytics ID}']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script> {/block:IfGoogleAnalyticsID} <!--OO.TS.-->
+  </body>
+</html>
