@@ -65,12 +65,13 @@ p, span, blockquote, pre, a, dl, dt, dd, ol, ul, li { letter-spacing: .03em; }
 
 #main { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-.entry { line-height: 2.0; padding-bottom: 4.2em; margin-bottom: 4.2em; background: url(http://madlover.org/tumblr/images/line.png) repeat-x bottom; }
+.entry { line-height: 2.0; padding-bottom: 3em; margin-bottom: 4em; background: url(http://madlover.org/tumblr/images/line.png) repeat-x bottom; }
 .entry p { padding-bottom: 1em; }
 .entry:last-child { margin-bottom: 0; }
+.entry h2 { font-size: 123.1%; font-weight: bold; }
 
-.entry-header, .pagenate { border-bottom: 1px solid #EEE; box-shadow: white 0 1px 0; padding-bottom: 1em; margin-bottom: 2em; }
-.entry-header .entry-title, .pagenate .entry-title { font-size: 138.5%; line-height: 1.6; padding-bottom: .5em; }
+.entry-header, .pagenate { border-bottom: 1px solid #EEE; box-shadow: white 0 1px 0; padding-bottom: .5em; margin-bottom: 1em; }
+.entry-header .entry-title, .pagenate .entry-title { font-size: 138.5%; line-height: 1.6; }
 .entry-header .day, .pagenate .day { color: #5B5B5B; font-size: 85%; }
 
 .entry-footer { margin-top: 1.5em; }
@@ -82,8 +83,8 @@ p, span, blockquote, pre, a, dl, dt, dd, ol, ul, li { letter-spacing: .03em; }
 .entry-photo { text-align: center; }
 
 .pagenate { margin-top: 1em; margin-bottom: 0; }
-.pagenate .next { float: right; }
-.pagenate .prev { float: left; }
+.pagenate .next { float: left; }
+.pagenate .prev { float: right; }
 
 #footer { padding-bottom: 4.2em; margin-top: 2em; }
 #footer .nav-footer { margin-bottom: 1em; }
